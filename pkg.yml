@@ -1,0 +1,10 @@
+- name: instsall pkgs
+  hosts: all
+  tasks:
+    - name: install packages
+      apt:
+        update_cache: yes
+        name:
+          - vim
+          - apache2
+        state: present
